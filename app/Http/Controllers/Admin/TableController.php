@@ -12,4 +12,8 @@ class TableController extends Controller
         $tables = Table::all();
         return view('admin.tables.index',compact('tables'));
     }
+
+    public function create(){
+        return view('admin.tables.create');
+    }
 }

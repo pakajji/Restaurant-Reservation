@@ -12,4 +12,8 @@ class ReservationController extends Controller
         $reservations = Reservation::all();
         return view('admin.reservation.index',compact('reservations'));
     }
+
+    public function create(){
+        return view('admin.reservation.create');
+    }
 }
