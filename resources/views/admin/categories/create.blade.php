@@ -11,18 +11,19 @@
                 <a href="{{route('admin.categories.index')}}" class="px-4 py-2 bg-yellow-400 hover:bg-yellow-500 rounded-lg text-black">Category Index</a>
             </div>
             <div class="m-2 p-2">
-                <form>
+                <form method="POST" action="{{route('admin.categories.store')}}">
+                    @csrf
                     <div class="form-group">
                         <label for="image">Image</label><br>
                         <input type="file" class="form-control-file" id="importImage">
                       </div>
                     <div class="form-group">
-                        <label for="formGroupExampleInput">Name</label>
-                        <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Example input">
+                        <label for="name">Name</label>
+                        <input type="text" class="form-control" id="name" placeholder="name">
                       </div>
                     <div class="form-group">
-                        <label for="formGroupExampleInput">Description</label>
-                        <input type="text" class="form-control pb-8" id="formGroupExampleInput" placeholder="Example input">
+                        <label for="description">Description</label>
+                        <input type="text" class="form-control pb-8" id="description" placeholder="description">
                       </div>
                       <div class="mt-6">
                         <button type="submit" class="px-4 py-2 bg-yellow-400 hover:bg-yellow-500 rounded-lg text-black">Store</button>
